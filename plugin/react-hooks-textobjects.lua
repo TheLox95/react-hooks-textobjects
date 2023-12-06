@@ -19,8 +19,7 @@ function selectHook(around)
 
   for _, hook in pairs(hooks) do
     for _, line in pairs(lines) do
-      if vim.fn.match(line, hook .. '(') == 0 then 
-        print(_)
+      if vim.fn.match(line, hook .. '(') ~= -1 then 
         vim.api.nvim_win_set_cursor(0, {_, 0})
         if around then
           vim.cmd("normal! V$%")
