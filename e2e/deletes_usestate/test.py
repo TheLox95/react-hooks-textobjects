@@ -22,4 +22,4 @@ expected.close()
 got.close()
 
 assert(expected_content == got_content)
-sys.stdout.write('\x1b[1;32m' + 'filed edited successfully' + '\x1b[0m' + '\n')
+sys.stdout.write('\x1b[1;32m' + 'file edited successfully' + '\x1b[0m' + '\n')
